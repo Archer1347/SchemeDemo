@@ -1,0 +1,7 @@
+include ':modulea'
+include ':moduleb'
+include ':Scheme'
+include ':Processor'
+include ':annotation'
+include ':app'
+rootProject.name = "SchemeDemo"
