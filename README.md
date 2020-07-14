@@ -14,7 +14,7 @@ group为各个模块的唯一字符串，不同模块不可重复
 场景1：应用内服务端下发uri进行页面跳转  
 1、在需要支持uri跳转的Activity增加注解@SchemePath("{随意填，唯一字符串}")  
 2、跳转事件  
-  SchemeManager.handleScheme(context, {服务端下发的uri字符串})  
+&#8195;&#8195;SchemeManager.handleScheme(context, {服务端下发的uri字符串})  
     
 注：参数支持  
 uri支持参数，如"scheme://ModuleA/Activity?data=1&time=20200714&hasData=true"  
@@ -31,15 +31,15 @@ var hasData: Boolean = false
 场景2：通知栏点击，携带uri进行页面跳转    
 1、应用首页Activity增加注解@SchemePath("{随意填}")  
 2、application调用初始化  
-  SchemeManager.initScheme("{你的应用的scheme}", "{首页Activity的注解}")  
+&#8195;&#8195;SchemeManager.initScheme("{你的应用的scheme}", "{首页Activity的注解}")  
 3、启动页，通知栏点击入口  
-  val data = intent.getStringExtra("data")  
-  if (data != null) {  
-      SchemeManager.handleScheme(this, data)  
-  } else if (isTaskRoot) {  
-      startActivity(Intent(this, MainActivity::class.java))   
-  }  
-  finish()  
+&#8195;&#8195;val data = intent.getStringExtra("data")  
+&#8195;&#8195;if (data != null) {  
+&#8195;&#8195;&#8195;&#8195;SchemeManager.handleScheme(this, data)  
+&#8195;&#8195;} else if (isTaskRoot) {  
+&#8195;&#8195;&#8195;&#8195;startActivity(Intent(this, MainActivity::class.java))   
+&#8195;&#8195;}  
+&#8195;&#8195;finish()  
     
 场景三：其他应用通过uri调起进行页面跳转  
 1、注册中转activity  
