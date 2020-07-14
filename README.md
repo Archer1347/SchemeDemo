@@ -43,22 +43,23 @@ var hasData: Boolean = false
     
 场景三：其他应用通过uri调起进行页面跳转  
 1、注册中转activity  
-        <activity  
+<activity  
             android:name="com.archer.scheme.SchemeActivity"  
-            android:configChanges="orientation|keyboardHidden|screenSize"   
+            android:configChanges="orientation|keyboardHidden|screenSize"  
             android:launchMode="singleTask"  
             android:screenOrientation="behind"  
             android:theme="@style/Translucent">  
             <intent-filter>  
-                <action android:name="android.intent.action.VIEW" />  
+                <action android:name="android.intent.action.VIEW" />   
   
                 <category android:name="android.intent.category.BROWSABLE" />  
                 <category android:name="android.intent.category.DEFAULT" />  
   
-                <data android:scheme="{你的应用的scheme}" />  
+                <data android:scheme="scheme" />   
             </intent-filter>  
         </activity>  
-           
+          
+            
         
    
 
