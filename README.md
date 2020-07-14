@@ -19,12 +19,14 @@ group为各个模块的唯一字符串，不同模块不可重复
 注：参数支持  
 uri支持参数，如"scheme://ModuleA/Activity?data=1&time=20200714&hasData=true"  
 Activity的参数增加@SchemeExtra注解，如  
-@SchemeExtra  
-var data: Int = 2  
-@SchemeExtra  
-var time: String? = null   
-@SchemeExtra  
-var hasData: Boolean = false  
+```java
+  @SchemeExtra  
+  var data: Int = 2  
+  @SchemeExtra  
+  var time: String? = null   
+  @SchemeExtra  
+  var hasData: Boolean = false  
+```
   
 通过调用Activity通过SchemeManager.inject(this)注入参数  
   
