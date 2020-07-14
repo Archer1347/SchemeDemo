@@ -51,10 +51,8 @@ var hasData: Boolean = false
             android:theme="@style/Translucent">  
             <intent-filter>  
                 <action android:name="android.intent.action.VIEW" />   
-  
                 <category android:name="android.intent.category.BROWSABLE" />  
                 <category android:name="android.intent.category.DEFAULT" />  
-  
                 <data android:scheme="scheme" />   
             </intent-filter>  
         </activity>  
