@@ -37,6 +37,6 @@ dependencies {
 
     implementation project(':modulea')
     implementation project(':moduleb')
-    implementation project(':Scheme')
-    kapt project(':Processor')
+    implementation project(':scheme')
+    kapt project(':scheme-compiler')
 }

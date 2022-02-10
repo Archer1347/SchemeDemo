@@ -3,10 +3,9 @@ package com.archer.scheme.modulea
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.archer.scheme.SchemeManager
-import com.archer.scheme.annotation.SchemeExtra
-import com.archer.scheme.annotation.SchemePath
-import com.archer.scheme.modulea.R
+import com.scheme.core.SchemeManager
+import com.scheme.annotation.SchemeExtra
+import com.scheme.annotation.SchemePath
 import kotlinx.android.synthetic.main.activity_module2.*
 
 @SchemePath("ModuleA/Activity2")

@@ -1,7 +1,7 @@
 package com.archer.scheme.demo
 
 import android.app.Application
-import com.archer.scheme.SchemeManager
+import com.scheme.core.SchemeManager
 
 /**
  * Created by ljq on 2020/7/14

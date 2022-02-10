@@ -4,7 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="gradleHome" value="$USER_HOME$/.gradle/wrapper/dists/gradle-6.1.1-all/cfmwm155h49vnt3hynmlrsdst/gradle-6.1.1" />
@@ -12,12 +12,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Processor" />
-            <option value="$PROJECT_DIR$/Scheme" />
-            <option value="$PROJECT_DIR$/annotation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/modulea" />
             <option value="$PROJECT_DIR$/moduleb" />
+            <option value="$PROJECT_DIR$/scheme" />
+            <option value="$PROJECT_DIR$/scheme-annotation" />
+            <option value="$PROJECT_DIR$/scheme-compiler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

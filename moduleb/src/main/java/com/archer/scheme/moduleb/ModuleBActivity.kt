@@ -3,10 +3,9 @@ package com.archer.scheme.moduleb
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.archer.scheme.SchemeManager
-import com.archer.scheme.annotation.SchemeExtra
-import com.archer.scheme.annotation.SchemePath
-import com.archer.scheme.moduleb.R
+import com.scheme.core.SchemeManager
+import com.scheme.annotation.SchemeExtra
+import com.scheme.annotation.SchemePath
 
 @SchemePath("ModuleB/Activity")
 class ModuleBActivity : AppCompatActivity() {

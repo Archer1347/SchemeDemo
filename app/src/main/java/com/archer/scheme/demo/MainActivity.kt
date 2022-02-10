@@ -12,8 +12,8 @@ import android.os.Handler
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import com.archer.scheme.SchemeManager
-import com.archer.scheme.annotation.SchemePath
+import com.scheme.core.SchemeManager
+import com.scheme.annotation.SchemePath
 import kotlinx.android.synthetic.main.activity_main.*
 
 @SchemePath("Main/Activity")
