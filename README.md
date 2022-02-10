@@ -9,17 +9,35 @@
   
 注：activity的注解格式：group/path  
 group为各个模块的唯一字符串，不同模块不可重复  
+
+接入：
+使用姿势：
+根build.gradle
+```
+repositories {
+    google()
+    mavenCentral()
+    maven { url 'https://www.jitpack.io' }
+}
+```
+module依赖：
+```
+api 'com.github.Archer1347.SchemeDemo:scheme:1.0.0'
+kapt 'com.github.Archer1347.SchemeDemo:scheme-compiler:1.0.0'
+```
   
 使用姿势：  
 场景1：应用内服务端下发uri进行页面跳转  
 1、在需要支持uri跳转的Activity增加注解@SchemePath("{随意填，唯一字符串}")  
 2、跳转事件  
-&#8195;&#8195;SchemeManager.handleScheme(context, {服务端下发的uri字符串})  
+```
+SchemeManager.handleScheme(context, {服务端下发的uri字符串})  
+```
     
 注：参数支持  
 uri支持参数，如"scheme://ModuleA/Activity?data=1&time=20200714&hasData=true"  
 Activity的参数增加@SchemeExtra注解，如  
-```java
+```
   @SchemeExtra  
   var data: Int = 2  
   @SchemeExtra  
@@ -28,24 +46,31 @@ Activity的参数增加@SchemeExtra注解，如
   var hasData: Boolean = false  
 ```
   
-通过调用Activity通过SchemeManager.inject(this)注入参数  
+```
+通过调用Activity通过
+SchemeManager.inject(this)注入参数  
+```
   
 场景2：通知栏点击，携带uri进行页面跳转    
 1、应用首页Activity增加注解@SchemePath("{随意填}")  
 2、application调用初始化  
-&#8195;&#8195;SchemeManager.initScheme("{你的应用的scheme}", "{首页Activity的注解}")  
+```
+SchemeManager.initScheme("{你的应用的scheme}", "{首页Activity的注解}")  
+```
 3、启动页，通知栏点击入口  
-&#8195;&#8195;val data = intent.getStringExtra("data")  
-&#8195;&#8195;if (data != null) {  
-&#8195;&#8195;&#8195;&#8195;SchemeManager.handleScheme(this, data)  
-&#8195;&#8195;} else if (isTaskRoot) {  
-&#8195;&#8195;&#8195;&#8195;startActivity(Intent(this, MainActivity::class.java))   
-&#8195;&#8195;}  
-&#8195;&#8195;finish()  
+```
+val data = intent.getStringExtra("data")  
+if (data != null) {  
+  SchemeManager.handleScheme(this, data)  
+} else if (isTaskRoot) {  
+  startActivity(Intent(this, MainActivity::class.java))   
+}  
+finish()  
+```
     
 场景三：其他应用通过uri调起进行页面跳转  
 1、注册中转activity  
-```java
+```
 <activity  
    android:name="com.archer.scheme.SchemeActivity"  
    android:configChanges="orientation|keyboardHidden|screenSize"  
